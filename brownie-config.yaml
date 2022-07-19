@@ -1,0 +1,22 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts-upgradeable@4.3.2
+  - OpenZeppelin/openzeppelin-contracts@4.7.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin/contracts-upgradeable=OpenZeppelin/openzeppelin-contracts-upgradeable@4.3.2/contracts'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.7.0'
+
+dotenv: .env
+
+networks:
+  default: development
+  development:
+    verify: False
+  rinkeby:
+    verify: True
+  kovan:
+    verify: True
+
+wallets:
+  from_key: ${PRIVATE_KEY}
